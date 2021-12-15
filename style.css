@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body{
+    padding: 80px 30px;
+    background-color: var(--very-light-gray);
+}
+
+.header h1:nth-of-type(1){
+    font-weight: 200;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--very-dark-blue);
+}
+
+.header h1:nth-of-type(2){
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--very-dark-blue);
+}
+
+.header p{
+    font-weight: 200;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card{
+    margin-top: 60px;
+}
+
+.content{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 15px;
+    box-shadow: -2px 12px 13px 0px var(--grayish-blue);
+    overflow: hidden;
+}
+
+.supervisor, .team-builder, .karma {
+    margin-bottom: 30px;
+}
+
+.supervisor{
+    border-top: 5px solid var(--cyan);
+}
+
+.team-builder{
+    border-top: 5px solid var(--red);
+}
+
+.karma{
+    border-top: 5px solid var(--orange);
+}
+
+.calculator{
+    border-top: 5px solid var(--blue);
+}
+
+.content h3{
+    font-size: 1.3rem;
+    color: var(--very-dark-blue);
+}
+
+.content p{
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+}
+
+p{
+    color: var(--grayish-blue);
+}
+
+@media(min-width:1000px){
+    body{
+        padding: 80px 150px;
+    }
+    
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px auto;
+        max-width: 1140px;
+        justify-content: center;
+    }
+
+    .header h1:nth-of-type(1), .header h1:nth-of-type(2){
+        font-size: 2.3rem;
+    }
+
+    .header p{
+        padding: 0 300px;
+    }
+
+    .content{
+        width: 350px;
+        margin: 15px;
+        padding: 33px;
+    }
+
+    .content p{
+        font-size: 0.8rem;
+    }
+
+    .supervisor{
+        order: 1;
+    }
+
+    .team-builder{
+        order: 2;
+    }
+
+    .karma{
+        order: 4;
+    }
+
+    .calculator{
+        order: 3;
+    }
+
+    .supervisor, .calculator{
+        transform: translateY(50%);
+    }
+}
